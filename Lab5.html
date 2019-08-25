@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello React!</title>
+<link rel="stylesheet" type="text/css" href="Lab5.css">
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    </head>    
+    <body>
+      <U> <h1>LAB 5 - JAVASCRIPT LIBRARIES. </h1></U>
+     <hr>
+    <div id="root"></div>
+    
+ <flex-box>
+    <image id="theImage" src ="Chicago.jpg" width = "700" height ="500" class="bordered" />
+  </flex-box>
+ 
+  <script type="text/babel">   
+
+    /* ---JSX code begins here----*/
+
+  class Parent extends React.Component {
+
+/*--------make picture bigger----*/
+
+ biggerImage(id)
+ { 
+     let pict = document.getElementById(id);
+     pict.width = 1.2 * pict.width;
+
+} 
+
+/*---- make picture smaller ----*/
+
+smallerImage(id) {
+    let pict = document.getElementById(id);
+    pict.width = pict.width / 1.2;
+
+}
+
+/*-----Hide the picture---*/
+
+ Hide(id)
+{
+    let x = document.getElementById(id);
+    if(x.style.display ==="none")
+    {
+        x.style.display ="block";
+    }
+    else{
+        x.style.display ="none";
+    }
+}
+
+  render () {
+    return (
+    <div className = "Parent">
+        <caption>
+    <b><u><h2> CHICAGO </h2></u></b>  </caption>
+    <sizerbutton-container>
+    <sizer-button onClick= {()=>this.biggerImage("theImage")}> + </sizer-button>
+    <sizer-button onClick={()=>this.Hide("theImage")}> HIDE </sizer-button>
+    <sizer-button onClick={()=>this.smallerImage("theImage")}> - </sizer-button> 
+    </sizerbutton-container>
+  </div>
+    );
+  }
+}
+var widget = React.createElement(
+    Parent );
+    ReactDOM.render(
+    <Parent />, document.getElementById('root'));
+</script>
+</body>
+</html>

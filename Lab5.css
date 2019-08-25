@@ -1,0 +1,36 @@
+
+        body {
+          padding: 2% 4%;
+          font-family: Verdana;
+          color: yellowgreen;
+          background-color : lightcyan;
+        }
+
+    sizer-button {
+    background-color: #eeeeee;
+    color: green;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 10px;
+    border: 1px solid black;
+    width: 4.5em;
+    height: 1.75em;
+    line-height: 1.55em; 
+    font-family: 'Verdana';
+    font-size: 1.5em;
+  }
+
+  sizer-button:hover {
+    background-color:#dddddd;
+    box-shadow: -2px -2px 2px 1px #cccccc;
+    cursor: pointer;
+    }
+
+  sizerbutton-container {
+    display: flex;
+  }
+h2{margin-left: 25em;
+     margin-right: 35em;
+    margin-bottom: 0.25em;
+    color : red;
+  }
